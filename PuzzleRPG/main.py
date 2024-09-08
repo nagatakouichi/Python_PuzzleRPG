@@ -10,7 +10,7 @@ def main():
         if player_name == '':
             print('エラー：プレイヤー名を入力してください')
             
-    print('*** Puzzule & Monsters ***')
+    print('*** Puzzule Battle ***')
 
     slime = {'name':'スライム', 'hp':100, 'max_hp':100, 'element':'水', 'ap':10, 'dp':1}
     goblin = {'name':'ゴブリン', 'hp':200, 'max_hp':200, 'element':'土', 'ap':20, 'dp':5}
@@ -28,9 +28,9 @@ def main():
     
     beat_monster_num = go_dungion(player_name, monsters, party)
     if beat_monster_num < 5:
-        print('*** GAME OVER!! ***')
+        print('*** GAME OVER ***')
     else:
-        print('*** GAME CLEARED!! ***')
+        print('*** GAME CLEAR!! ***')
     print(f'倒したモンスターの数={beat_monster_num}')
 
 def go_dungion(player_name, monsters, party):

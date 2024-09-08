@@ -49,9 +49,9 @@ def on_enemy_turn(party, monster):
     attackManager.do_enemy_attack(monster, party)
 
 def show_battle_field(party, monster, gems_slot):
-    print('バトルフィールド')
     monsterManager.print_monster_name(monster)
     print(f'HP = {monster['hp']} / {monster['max_hp']}\n')
+    monsterManager.print_monster_element_boost(monster)
     for friend in party['friends'] :
         monsterManager.print_monster_name(friend)
         print(' ', end='')

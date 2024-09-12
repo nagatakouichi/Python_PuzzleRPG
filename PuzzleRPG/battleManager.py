@@ -32,7 +32,7 @@ def do_battle(monster_data, party):
 def on_player_turn(party, monster, gems_slot):
     print(f'【{party['player_name']}のターン】(HP={party['hp']})')
     show_battle_field(party, monster, gems_slot)
-    """
+    
     command = ''
     is_correct_command = False
     while not is_correct_command :
@@ -41,37 +41,7 @@ def on_player_turn(party, monster, gems_slot):
         if not is_correct_command :
             print('エラー:コマンドが正しくありません。 もう一度入力してください。')
     gemManager.move_gem_command(gems_slot, command)
-
-
-    is_correct_command2 = False
-    while not is_correct_command2 :
-        command = input('コマンド？ >')
-        is_correct_command2 = gemManager.check_valid_command(command)
-        if not is_correct_command2 :
-            print('エラー:コマンドが正しくありません。 もう一度入力してください。')
-    gemManager.move_gem_command(gems_slot, command)
-    """
-    #移動回数は通常1回、前のターンで3コンボ以上している時は2回
-    #2回移動できるときは、その旨を表示する
-    move_num = 2
-    move_gems(gems_slot, move_num)
     gemManager.evaluate_gems(gems_slot, monster, party)
-
-def move_gems(gems_slot, move_num):
-    command = ''
-    for i in range(move_num) :
-        #毎回フィールドの対応アルファベットを表示する
-        is_correct_command = False
-        while not is_correct_command :
-            command = input('コマンド？ >')
-            is_correct_command = gemManager.check_valid_command(command)
-            if not is_correct_command :
-                print('エラー:コマンドが正しくありません。 もう一度入力してください。')
-        gemManager.move_gem_command(gems_slot, command)
-
-
-
-
 
 def on_enemy_turn(party, monster):
     print('【', end='')

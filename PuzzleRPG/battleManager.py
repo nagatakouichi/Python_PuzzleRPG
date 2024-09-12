@@ -32,6 +32,7 @@ def do_battle(monster_data, party):
 def on_player_turn(party, monster, gems_slot):
     print(f'【{party['player_name']}のターン】(HP={party['hp']})')
     show_battle_field(party, monster, gems_slot)
+    
     command = ''
     is_correct_command = False
     while not is_correct_command :
@@ -40,7 +41,7 @@ def on_player_turn(party, monster, gems_slot):
         if not is_correct_command :
             print('エラー:コマンドが正しくありません。 もう一度入力してください。')
     gemManager.move_gem_command(gems_slot, command)
-    gemManager.evaluate_gems(gems_slot, monster, party, command)
+    gemManager.evaluate_gems(gems_slot, monster, party)
 
 def on_enemy_turn(party, monster):
     print('【', end='')

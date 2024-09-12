@@ -1,9 +1,10 @@
-#import
 import partyManager
 import battleManager
+import os
 
 #function
 def main():
+    os.system('')
     player_name = ''
     while player_name == '':
         player_name = input('プレイヤー名を入力してください> ')

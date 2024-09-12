@@ -15,7 +15,6 @@ def print_monster_element_boost(monster):
             resist = element
         elif ratio == 0.5 :
             weekness = element
-            
 
     weekness_symbol = config.ELEMENT_SYMBOLS[weekness]
     weekness_color = config.ELEMENT_COLORS[weekness]

@@ -61,7 +61,7 @@ def swap_gem(gems_slot, swap_gem_index, is_swap_left):
     gems_slot[destination_index] = gems_slot[swap_gem_index]
     gems_slot[swap_gem_index] = destination_element
 
-def evaluate_gems(gems_slot, monster, party, command):
+def evaluate_gems(gems_slot, monster, party):
     is_combo = True
     combo_num = 0
     while is_combo :

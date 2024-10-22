@@ -76,6 +76,7 @@ def evaluate_gems(gems_slot, monster, party):
         banishable_slot = check_banishable(gems_slot)
         if len(banishable_slot) <= 0 :
             is_combo = False
+    return combo_num
 
 def check_banishable(gems_slot):
     slot_num = 0

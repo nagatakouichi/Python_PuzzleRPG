@@ -17,13 +17,13 @@ def main():
     goblin = {'name':'ゴブリン', 'hp':200, 'max_hp':200, 'element':'土', 'ap':20, 'dp':5}
     giantbat = {'name':'オオコウモリ', 'hp':300, 'max_hp':300, 'element':'風', 'ap':30, 'dp':10}
     werewolf = {'name':'ウェアウルフ', 'hp':400, 'max_hp':400, 'element':'風', 'ap':40, 'dp':15}
-    dragon = {'name':'ドラゴン', 'hp':600, 'max_hp':600, 'element':'火', 'ap':50, 'dp':20}
+    dragon = {'name':'ドラゴン', 'hp':500, 'max_hp':500, 'element':'火', 'ap':50, 'dp':20}
     monsters = [slime, goblin, giantbat, werewolf, dragon]
     
-    seiryu = {'name':'青龍', 'hp':150, 'max_hp':150, 'element':'風', 'ap':15, 'dp':10}
+    seiryu = {'name':'青龍', 'hp':150, 'max_hp':150, 'element':'風', 'ap':25, 'dp':10}
     suzaku = {'name':'朱雀', 'hp':150, 'max_hp':150, 'element':'火', 'ap':25, 'dp':10}
-    byakko = {'name':'白虎', 'hp':150, 'max_hp':150, 'element':'土', 'ap':20, 'dp':5}
-    genbu = {'name':'玄武', 'hp':150, 'max_hp':150, 'element':'水', 'ap':20, 'dp':15}
+    byakko = {'name':'白虎', 'hp':150, 'max_hp':150, 'element':'土', 'ap':25, 'dp':10}
+    genbu = {'name':'玄武', 'hp':150, 'max_hp':150, 'element':'水', 'ap':25, 'dp':10}
     friends = [seiryu, suzaku, byakko, genbu]
     party = partyManager.organize_party(player_name, friends)
     
